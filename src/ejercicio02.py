@@ -10,14 +10,15 @@ def max_y_min(secuencia):
     """
     Función que determina los valores máximos, minimos y el promedio de una secuencia de números.
     """
-    i = total = maximo = 0
+    i = total = 0
     primera_vez = True
 
     while i != len(secuencia):
         total += secuencia[i]
 
         if primera_vez is True:
-            minimo, primera_vez = secuencia[i], False
+            minimo = maximo = secuencia[i]
+            primera_vez = False
         if secuencia[i] > maximo:
             maximo = secuencia[i]
         elif secuencia[i] < minimo:
